@@ -24,7 +24,7 @@ function TopSearchBar(props) {
 
     return (
         <div className="topBar">
-            <form> 
+            <form className="search-form"> 
                 <input 
                     type="text" 
                     id="name" 
@@ -33,20 +33,22 @@ function TopSearchBar(props) {
                     onChange={handleSearchInput}
                 />
 
-                <label htmlFor="borough" value="required"><h4>*</h4></label>
-                <select 
-                    required
-                    id="borough"
-                    value={props.value.borough} 
-                    onChange={handleSearchInput}
-                > 
-                        <option value="" label="Borough" disabled></option>
-                        <option value="Bronx">Bronx</option> 
-                        <option value="Brooklyn">Brooklyn</option>
-                        <option value="Manhattan">Manhattan</option>
-                        <option value="Queens">Queens</option>
-                        <option value="Staten Island">Staten Island</option>
-                </select>
+                <span> 
+                    <label htmlFor="borough" value="required" id="required" ><h4>*</h4></label>
+                    <select 
+                        required
+                        id="borough"
+                        value={props.value.borough} 
+                        onChange={handleSearchInput}
+                    > 
+                            <option value="" label="Borough" disabled></option>
+                            <option value="Bronx">Bronx</option> 
+                            <option value="Brooklyn">Brooklyn</option>
+                            <option value="Manhattan">Manhattan</option>
+                            <option value="Queens">Queens</option>
+                            <option value="Staten Island">Staten Island</option>
+                    </select>
+                </span>
 
                 <select 
                     id="letterGrade"

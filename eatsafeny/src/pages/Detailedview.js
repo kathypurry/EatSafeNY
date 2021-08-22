@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import SideSearchBar from '../components/SideSearchBar'
+import TopSearchBar from '../components/TopSearchBar'
 import Reviews from '../components/Reviews'
 import ReviewForm from "../components/ReviewForm"
 import { useParams } from 'react-router-dom'
@@ -42,8 +42,7 @@ function DetailedView(props) {
 
     return (
         <div>
-            <p>Restaurant view</p>
-            <SideSearchBar {...props}/>
+            <TopSearchBar {...props}/>
             <h1>{restaurant.dba}</h1>
             <img width="200px" height="200px" src={LetterGrade()} alt="inspection letter grade"/>
             <br />
@@ -52,12 +51,14 @@ function DetailedView(props) {
             <p>Phone Number: {restaurant.phone}</p>
             <p>✅ Covid-safe</p>
             </div>
-            <h2>See it to believe it.</h2>
-            <h3>"From New Yorkers like you!"</h3>
+            <h2 className="slogans">See it to believe it.</h2>
+            <h3 className="slogans">"From New Yorkers like you!"</h3>
             <Reviews/>
-            <h4>Stay Negative!</h4>
+            <h4 className="slogans">Stay Negative!</h4>
+            <div id="review-section">
             <h4> Leave a Review.</h4>
             <ReviewForm/>
+            </div>
         </div>
     )
 }

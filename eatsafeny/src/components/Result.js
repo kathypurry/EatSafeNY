@@ -30,7 +30,7 @@ function Result({restaurant}) {
 
             <img src={LetterGrade()} width="50px" alt="letter grade"/>
             <Link to={`/results/${restaurant.camis}`}>{restaurant.dba}</Link>
-            <p>Reviewers Average rating: ✅ Covid-SAFE </p>
+            <p>Reviewers Average rating: {<p className="slogans"> ✅ Covid-SAFE</p>} </p>
     
         </div>
     )

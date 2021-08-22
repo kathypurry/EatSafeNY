@@ -6,7 +6,9 @@ function Results(props) {
     return (
         <div>
             <TopSearchBar {...props}/>
-            <h2>Search Results</h2>
+            <div className="search">
+            <h2 id="search-h2">Search Results</h2>
+            </div>
             {props.error ? <p>Sorry, no search results found </p> : null}
             <ResultsList {...props} />
         </div>
