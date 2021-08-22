@@ -20,7 +20,12 @@ a {
 }
 .slide1:hover div {
   opacity: 100%;
-  background-color: rgb(34, 139, 196);
+  background-color: rgba(8, 147, 240, 0.616);
+  text-align: center;
+  /* position: absolute; */
+  /* display: inline-block;
+line-height: normal; */
+/* vertical-align: middle; */
 }
 
 .App {
